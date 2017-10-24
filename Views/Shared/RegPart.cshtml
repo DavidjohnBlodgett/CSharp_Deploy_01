@@ -1,0 +1,34 @@
+<h1 class="row top-buffer" >Registration</h1>
+
+<div class="row top-buffer" style="border: 1px solid grey; hieght: 1px;"></div>
+
+@model CSharp_belt_exam_project_two.Models.UserVal
+<!-- <div asp-validation-summary="All"></div> -->
+
+<form class="row top-buffer" asp-controller="Users" asp-action="Users" method="post">
+    <table>
+        <tr>
+            <td>Name</td><td><input asp-for="name"></td>
+            <td><span asp-validation-for="name" class="error"></span></td>
+        </tr>
+        <tr>
+            <td>Alias</td><td><input asp-for="alias"></td>
+            <td><span asp-validation-for="alias" class="error"></span></td>
+        </tr>
+        <tr>
+            <td>Email Address</td><td><input asp-for="email"></td>
+            <td><span asp-validation-for="email" class="error"></span></td>
+        </tr>
+        <tr>
+            <td>Password</td><td><input asp-for="password"></td>
+            <td><span asp-validation-for="password" class="error"></span></td>
+        </tr>
+        <tr>
+            <td>Confirm Password</td><td><input asp-for="conf_pass"></td>
+            <td><span asp-validation-for="conf_pass" class="error"></span></td>
+        </tr>
+        <tr>
+            <td><button type="submit">Submit</button></td>
+        </tr>
+    </table>
+</form>

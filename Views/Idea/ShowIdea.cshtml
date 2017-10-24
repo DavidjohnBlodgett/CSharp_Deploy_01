@@ -1,0 +1,42 @@
+<div class="row">
+    <div class="col-sm-6">
+        <a href="/users/@ViewBag.currentIdea.user.userid">@ViewBag.currentIdea.user.alias</a>
+         says:
+        <textarea name="" id="" cols="60" rows="5">@ViewBag.currentIdea.content</textarea>
+
+    </div>
+    <div class="col-sm-2"></div>
+    <div class="col-sm-2">
+        <a href="/bright_ideas">Bright Ideas</a>
+    </div>
+    <div class="col-sm-1">
+        <a href="/users/logoff">Log out</a>
+    </div>
+
+</div>
+
+<div class="row">
+    <h3>People who liked this Post:</h3>
+</div>
+
+<div class="row">
+    <table class="table table-bordered table-striped">
+        <header>
+            <tr>
+                <th>Alias</th>
+                <th>Name</th>
+            </tr>
+        </header>
+        <body>
+            <!-- build this list -->
+            @{
+                foreach(var like in ViewBag.currentIdea.likes) {
+                    <tr>
+                        <td><a href="/users/@like.user.userid">@like.user.alias</a></td>
+                        <td>@like.user.name</td>
+                    </tr>
+                }
+            }
+        </body>
+    </table>
+</div>

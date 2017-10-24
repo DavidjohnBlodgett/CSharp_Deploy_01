@@ -1,0 +1,23 @@
+<h1 class="row top-buffer" >Login</h1>
+
+<div class="row top-buffer" style="border: 1px solid grey; hieght: 1px;"></div>
+
+@model CSharp_belt_exam_project_two.Models.LoginVal
+<!-- <div asp-validation-summary="All"></div> -->
+
+<form class="row top-buffer" asp-controller="Users" asp-action="UserLogin" method="post">
+    <table>
+        <tr>
+            <td>Email Address</td><td><input asp-for="email"></td>
+            <td><span asp-validation-for="email" class="error"></span></td>
+        </tr>
+        <tr>
+            <td>Password</td><td><input asp-for="password"></td>
+            <td><span asp-validation-for="password" class="error"></span></td>
+        </tr>
+        <tr>
+            <td><button type="submit">Login</button></td>
+        </tr>
+    </table>
+</form>
+
